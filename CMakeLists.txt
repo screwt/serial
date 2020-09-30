@@ -37,33 +37,33 @@ else()
 endif()
 
 ## Add example project
-add_executable(serial_example examples/serial_example.cc)
-add_dependencies(serial_example ${PROJECT_NAME})
-target_link_libraries(serial_example ${PROJECT_NAME})
+#add_executable(serial_example examples/serial_example.cc)
+#add_dependencies(serial_example ${PROJECT_NAME})
+#target_link_libraries(serial_example ${PROJECT_NAME})
 
 ## Include headers
 include_directories(include)
 
 ## Install
-set(INSTALL_LIB_DIR lib)
-set(INSTALL_INCLUDE_DIR include)
-set(INSTALL_CMAKE_DIR share/serial/cmake)
+#set(INSTALL_LIB_DIR lib)
+#set(INSTALL_INCLUDE_DIR include)
+#set(INSTALL_CMAKE_DIR share/serial/cmake)
 
 ## Install executable
-install(TARGETS ${PROJECT_NAME}
-    DESTINATION ${INSTALL_LIB_DIR}
-    EXPORT ${PROJECT_NAME}-targets
-)
+#install(TARGETS ${PROJECT_NAME}
+#    DESTINATION ${INSTALL_LIB_DIR}
+#    EXPORT ${PROJECT_NAME}-targets
+#)
 
 ## Install headers
-install(FILES include/serial/serial.h include/serial/v8stdint.h
-    DESTINATION ${INSTALL_INCLUDE_DIR}/serial)
+#install(FILES include/serial/serial.h include/serial/v8stdint.h
+#    DESTINATION ${INSTALL_INCLUDE_DIR}/serial)
 
 ## Install CMake files
-install(EXPORT ${PROJECT_NAME}-targets DESTINATION ${INSTALL_CMAKE_DIR})
+#install(EXPORT ${PROJECT_NAME}-targets DESTINATION ${INSTALL_CMAKE_DIR})
 
-install(FILES ${CMAKE_SOURCE_DIR}/cmake/${PROJECT_NAME}Config.cmake ${CMAKE_SOURCE_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake
-        DESTINATION ${INSTALL_CMAKE_DIR})
+#install(FILES ${CMAKE_SOURCE_DIR}/cmake/${PROJECT_NAME}Config.cmake ${CMAKE_SOURCE_DIR}/cmake/${PROJECT_NAME}ConfigVersion.cmake
+#        DESTINATION ${INSTALL_CMAKE_DIR})
 
 ## Tests
 # FIXME
